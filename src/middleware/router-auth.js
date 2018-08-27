@@ -14,6 +14,7 @@ export default new Router()
   .then(token => {
     res.cookie('X-Sluggram-Token', token, {maxAge: 900000})
     res.send(token)
+    
   })
   .catch(next)
 })
